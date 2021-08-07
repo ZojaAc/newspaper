@@ -1,0 +1,120 @@
+.nav {
+  margin-top: 60px;
+  overflow: auto;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+  }
+
+  &__wrapper {
+    margin-left: -16px;
+    margin-right: -16px;
+    position: static;
+
+    @include media-breakpoint-up(lg) {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__button {
+    background-color: $col-accent;
+    padding: 18px 14px;
+    border: none;
+    border-radius: 0;
+    // width: 50px;
+    // height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &._active {
+      background-color: $col-white;
+      padding: 0;
+      left: auto;
+      right: 17px;
+      top: 17px;
+      position: absolute;
+    
+      .nav__burger:nth-child(1) {
+        transform: rotate(45deg);
+        margin-bottom: 0;
+        background-color: #d7d9df;
+        width: 43px;
+      }
+
+      .nav__burger:nth-child(2) {
+        transform: rotate(-45deg);
+        margin-bottom: 0;
+        margin-top: -3px;
+        background-color: #d7d9df;
+        width: 43px;
+      }
+
+      .nav__burger:nth-child(3) {
+        display: none;
+      } 
+    }
+  }
+
+  &__burger {
+    background-color: $col-white;
+    display: block;
+    width: 23px;
+    height: 3px;
+    margin-bottom: 3px;
+  }
+
+  &__burger:nth-child(3) {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    background-color: $col-light;
+    padding: 17px 16px;
+    font-family: $font-text;
+    @include font(16px, 19px, 400);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $text-menu;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-breakpoint-up(lg) {
+      @include font(15px, 18px, 400);
+      letter-spacing: 2px;
+      background-color: $col-white;
+      padding: 5px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__shape {
+    display: block;
+    height: 12px;
+    width: 8px;
+  }
+
+  &__shape-block {
+    padding: 6px 8px;
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,164 @@
+.articles {
+  &__title {
+    @include font(17px, 20px, 700);
+    font-family: $font-text;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $col-dark;
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
+
+  &__col-title {
+    @include font(20px, 27px, 900);
+    font-family: $font-title;
+    margin-bottom: 15px;
+
+    &:nth-child(2) {
+      @include font(23px, 31px, 900);
+      font-family: $font-title;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+
+    &-sm {
+      @include font(14px, 19px, 900);
+      margin-bottom: 10px;
+      font-family: $font-title;
+    }
+
+    &-mark {
+      color: $col-accent;
+    }
+  }
+
+  &__col-text {
+    @include font(14px, 21px, 400);    
+
+    &-sm {
+      @include font(10px, 15px, 400);
+    }
+  }
+
+  &__col-wrapper {
+    position: relative;
+  }
+
+  &__col {
+    margin-bottom: 25px;
+  }
+
+  &__text-block {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    padding: 20px 15px;
+
+    &-sm {
+      margin-left: -15px;
+
+      @include media-breakpoint-up(lg) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__row-sm {
+    margin-bottom: 30px;
+
+    &:nth-child(3) {
+      margin-bottom: 0;
+    }
+  }
+
+  // &__col-left {
+  //   flex-direction: row;
+  //   flex-wrap: wrap;
+  // } 
+
+  &__page {
+    @include font(18px, 22px, 400);
+    color: $text-menu;
+    text-decoration: none;
+    list-style: none;    
+    padding: 9px 15px;
+
+    // &:hover {
+    //   color: $col-accent;
+    // }
+  }
+
+  &__page:hover {
+    color: $col-accent;
+    border: 1px solid $col-accent;
+  }
+
+  // &__pages::before {
+  //   content: '';
+  //   border: 22px solid transparent;
+  //   width: 0;
+  //   height: 0;
+  //   border-top: 0;
+  //   border-bottom-color: rgba(0, 0, 0, 0.3);;
+  //   position: absolute;
+  //   top: 10px;
+  //   left: 0;
+  // }
+
+  &__pages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+
+  &__page-desc {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+
+  &__sign-right .articles__sign-img {
+    transform: rotate(180deg);
+  }
+
+  &__sign-img {
+    padding: 10px;
+    display: block;
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  }
+
+  &__col-title-btn {
+    @include font(20px, 23px, 500);
+    font-family: $font-text;
+    color: $col-white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  &__text-block-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 43px 20px;
+  }
+
+  &__btn {
+    margin: 0 auto;
+    margin-top: 20px;
+    @include font(12px, 14px, 600);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $col-white;
+    font-family: $font-text;
+  }
+
+}

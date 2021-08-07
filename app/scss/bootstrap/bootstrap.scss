@@ -1,0 +1,18 @@
+// необходимый минимум для использования стилей b.s.
+@import "variables";  // подключили сюда на первое место, для доминирования наших стилей над исходными
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+//add nav
+@import "../../../node_modules/bootstrap/scss/bootstrap-utilities"; // подключаем утилиты для flex перестроения меню
+@import "../../../node_modules/bootstrap/scss/transitions";   // функция скрытия меню описана здесь (скрыть все пункты при моб.ширине) 
+@import "../../../node_modules/bootstrap/scss/nav";
+@import "../../../node_modules/bootstrap/scss/navbar";
+
+//add carousel
+@import "../../../node_modules/bootstrap/scss/carousel";
+
+//add grid
+@import "../../../node_modules/bootstrap/scss/grid";
+

@@ -1,0 +1,21 @@
+.container {
+  @include make-container();
+  max-width: 1170px;
+  // margin: 0 auto;
+}
+
+// .box{
+//   @include make-row();
+// }
+
+// .box__item{
+//   background-color: #fafafa;
+//   border: 1px solid #ccc;
+//   @include make-col-ready();
+//   @include make-col(6);
+//   @include media-breakpoint-down(lg){
+//     @include make-col(12);
+//     margin-bottom: 20px;
+//   }
+// }
+

@@ -1,0 +1,36 @@
+// здесь меняем переменные из b.s. на необходимые по макету
+$gutters: 16px;
+$container-padding-x: 16px;
+$grid-gutter-width: 30px;
+
+//breakpoins
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+// scss-docs-end grid-breakpoints
+
+//nav
+$navbar-padding-y: 16px;
+
+//slider
+$carousel-transition-duration: 2s; // время смены картинки
+$carousel-caption-spacer: 40px; // нижний margin блока caption
+// нижние индикаторы смены картинки
+$carousel-indicator-width: 10px; // ширина кнопки текущего слайда
+$carousel-indicator-height: 10px; // высота ..
+$carousel-indicator-spacer: 15px; // margin между кнопками
+// $carousel-indicator-hit-area-height: 10px !default;
+// боковые стрелки для перелистывания
+$carousel-control-icon-width: 20px; // ширина/высота стрелки
+$carousel-control-width: 35px; // ширина блока стрелки
+$carousel-control-prev-icon-bg: url(../../img/Rectangle-left.png);
+$carousel-control-next-icon-bg: url(../../img/Rectangle-right.png);
+
+
+
+

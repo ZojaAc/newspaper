@@ -1,0 +1,16 @@
+.button {
+  text-align: center;
+  color: $col-white;
+  @include font(12px, 14px, 600);
+  font-family: $font-text;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;  
+  background-color: rgba(#000000, 0.9);
+  border: 2px solid $col-accent;
+  cursor: pointer;  
+  padding: 11px 30px;
+  
+  // width: 170px;
+  // height: 47px;
+}
