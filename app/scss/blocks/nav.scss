@@ -1,20 +1,20 @@
 .nav {
-  margin-top: 60px;
-  overflow: auto;
+  margin-left: -16px;
+  margin-right: -16px;
+  position: static;
 
   @include media-breakpoint-up(lg) {
-    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
   }
-
-  &__wrapper {
-    margin-left: -16px;
-    margin-right: -16px;
-    position: static;
+  
+  &__menu {
+    margin-top: 60px;
+    overflow: auto;
 
     @include media-breakpoint-up(lg) {
-      margin-left: 0;
-      margin-right: 0;
-      margin-bottom: 30px;
+      margin-top: 0;
     }
   }
 

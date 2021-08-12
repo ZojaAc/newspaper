@@ -1,0 +1,46 @@
+.extra {
+
+  &__item {
+    position: relative;
+  }
+
+  &__text-block-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 40px 50px;
+  }
+
+  &__col-title-btn {
+    @include font(20px, 30px, 900);
+    font-family: $font-title;
+    color: $col-white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+
+    &__col-title-btn:first-child {
+      color: #1A1C1C;
+    }
+  }
+  
+  &__btn {
+    margin: 0 auto;
+    margin-top: 120px;
+    @include font(12px, 14px, 600);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $col-white;
+    font-family: $font-text;
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 260px;
+    }
+  }
+
+  
+
+}

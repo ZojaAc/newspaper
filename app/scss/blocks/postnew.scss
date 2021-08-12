@@ -1,0 +1,57 @@
+.postnew {
+
+  &__item {
+    @include media-breakpoint-up(lg) {
+      width: 25%;
+    }
+  }
+  
+  &__img {
+    height: 146px;
+
+    @include media-breakpoint-up(lg) {
+      height: 107px;
+    }
+  }
+
+  &__title {
+    @include font(16px, 19px, 600);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $col-white;
+    font-family: $font-text;
+    text-align: center;
+    margin: 0 auto;
+
+    // @include media-breakpoint-up(lg) {
+          
+    //   margin-bottom: 140px; 
+    // }
+  }
+
+  &__indicators {    
+    bottom: -45px;   
+
+    [data-bs-target] {
+      border-radius: 50%;
+      background-color: #000000;    
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  &__btn {
+    border: 1px solid $col-white;
+    background-color: rgba(#000000, 0.2);
+    margin: 0 auto;
+    margin-top: 16px;
+  }
+
+  &__caption {
+    bottom: 20px;
+  }
+
+
+}

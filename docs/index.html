@@ -17,80 +17,84 @@
     <div class="header">
       <div class="header__main-title">Новости культуры</div>
     </div>
-    <nav class="navbar nav__wrapper navbar-expand-lg">
+
+    <!-- меню -->
+    <nav class="navbar nav navbar-expand-lg">
       <button class="navbar-toggler nav__button js-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="nav__burger"></span>
         <span class="nav__burger"></span>
         <span class="nav__burger"></span>
       </button>
-      <div class="collapse nav navbar-collapse" id="navbarNav">
+      <div class="collapse nav__menu navbar-collapse" id="navbarNav">
         <ul class="navbar-nav flex-grow-1 justify-content-between">
           <li class="nav__item">
             <a class="nav__link active" aria-current="page" href="#">новости
               <div class="nav__shape-block">
-                <img class="nav__shape" src="../img/Shape.png" alt="shape">
+                <img class="nav__shape" src="img/Shape.png" alt="shape">
               </div>              
             </a>            
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#">обзоры
               <div class="nav__shape-block">
-                <img class="nav__shape" src="../img/Shape.png" alt="shape">
+                <img class="nav__shape" src="img/Shape.png" alt="shape">
               </div>         
             </a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#">музыка
               <div class="nav__shape-block">
-                <img class="nav__shape" src="../img/Shape.png" alt="shape">
+                <img class="nav__shape" src="img/Shape.png" alt="shape">
               </div>         
             </a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#">архитектура
               <div class="nav__shape-block">
-                <img class="nav__shape" src="../img/Shape.png" alt="shape">
+                <img class="nav__shape" src="img/Shape.png" alt="shape">
               </div>         
             </a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#">кино
               <div class="nav__shape-block">
-                <img class="nav__shape" src="../img/Shape.png" alt="shape">
+                <img class="nav__shape" src="img/Shape.png" alt="shape">
               </div>         
             </a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#">театр
               <div class="nav__shape-block">
-                <img class="nav__shape" src="../img/Shape.png" alt="shape">
+                <img class="nav__shape" src="img/Shape.png" alt="shape">
               </div>         
             </a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#">литература
               <div class="nav__shape-block">
-                <img class="nav__shape" src="../img/Shape.png" alt="shape">
+                <img class="nav__shape" src="img/Shape.png" alt="shape">
               </div>         
             </a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#">религия
               <div class="nav__shape-block">
-                <img class="nav__shape" src="../img/Shape.png" alt="shape">
+                <img class="nav__shape" src="img/Shape.png" alt="shape">
               </div>         
             </a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#">живопись
               <div class="nav__shape-block">
-                <img class="nav__shape" src="../img/Shape.png" alt="shape">
+                <img class="nav__shape" src="img/Shape.png" alt="shape">
               </div>         
             </a>
           </li>          
         </ul>
       </div>
     </nav>
+
+    <!-- слайдер -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators slide__indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -140,10 +144,10 @@
         </div>
       </div>
       <button class="carousel-control-prev slide__scroll-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <div class="slide__scroll-wrapper">
+        <span class="slide__scroll-wrapper">
           <span class="slide__scroll-title">Предыдущая</span>
           <span class="slide__scroll-left"></span>
-        </div>        
+        </span>        
       </button>
       <button class="carousel-control-prev slide__control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -155,12 +159,14 @@
         <span class="visually-hidden">Next</span>
       </button>
       <button class="carousel-control-next slide__scroll-next d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <div class="slide__scroll-wrapper">          
+        <span class="slide__scroll-wrapper">          
           <span class="slide__scroll-right"></span>
           <span class="slide__scroll-title">Следующая</span>
-        </div>
+        </span>
+      </button>
     </div>
 
+    <!-- основное содержимое -->
     <div class="articles">
       <!-- Stack the columns on mobile by making one full-width and the other half-width -->
       <div class="row articles__row">
@@ -174,7 +180,7 @@
                   <div class="articles__col-text">В минувшие выходные в Москве на фестивале «Оберег» 
                   вручили первую премию Russian World Music Awards</div>
                 </div>
-                <picture class="slide__img-block">
+                <picture>
                   <source media="(min-width: 992px)" srcset="img/new1-desktop.png">
                   <img class="articles__img d-block w-100" src="img/new1.png" alt="new-img">
                 </picture>
@@ -220,7 +226,7 @@
 
             <div class="articles__title">обзоры</div>
             <div class="col col-lg-6 articles__col">              
-              <picture class="slide__img-block">
+              <picture>
                 <source media="(min-width: 992px)" srcset="img/new3-desktop.png">
                 <img class="articles__img d-block w-100" src="img/new3.png" alt="new-img">
               </picture>  
@@ -230,7 +236,7 @@
               </div>
             </div>
             <div class="col col-lg-6 articles__col">   
-              <picture class="slide__img-block">
+              <picture>
                 <source media="(min-width: 992px)" srcset="img/new4-desktop.png">
                 <img class="articles__img d-block w-100" src="img/new4.png" alt="new-img">
               </picture>               
@@ -240,7 +246,7 @@
               </div>
             </div>
             <div class="col col-lg-6 articles__col">              
-              <picture class="slide__img-block">
+              <picture>
                 <source media="(min-width: 992px)" srcset="img/new5-desktop.png">
                 <img class="articles__img d-block w-100" src="img/new5.png" alt="new-img">
               </picture>    
@@ -250,7 +256,7 @@
               </div>
             </div>
             <div class="col col-lg-6 articles__col">      
-              <picture class="slide__img-block">
+              <picture>
                 <source media="(min-width: 992px)" srcset="img/new6-desktop.png">
                 <img class="articles__img d-block w-100" src="img/new6.png" alt="new-img">
               </picture>           
@@ -284,46 +290,115 @@
                     <img class="articles__btn-img" src="img/shape-btn.png" alt="shape">
                   </button>
                 </div>
-                <picture class="slide__img-block">
-                  <source media="(min-width: 992px)" srcset="">
-                  <img class="articles__img d-block w-100" src="../img/new7.png" alt="new-img">
+                <picture>
+                  <source media="(min-width: 992px)" srcset="img/new7-desktop.png">
+                  <img class="articles__img d-block w-100" src="img/new7.png" alt="new-img">
                 </picture>
               </div>                                          
             </div>
      
-          <!-- </div> -->
-         
-         
-        </div>
-
-        <div class="col-12 col-lg-4 articles__col-right">
-          <div class="col col-12 articles__col">desktop r.col 4/4</div>
-          <div class="col col-12 articles__col">desktop r.col 4/4</div>
-          <div class="col col-12 articles__col">desktop r.col 4/4</div>
-        </div>
-
-      </div>
-
-      <!-- <div class="row articles__row">
-        <div class="col-12 col-lg-8 articles__col-left">
-          <div class="col-12 col-lg-8 articles__col">.col-lg-8(1)</div>
-          <div class="col-12 col-lg-4 articles__col">.col-lg-4(1)</div>
+          <!-- </div> -->                  
         </div>
         
-      </div> -->
-    
-      <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-      <!-- <div class="row articles__row">
-        <div class="col-6 col-lg-4 articles__col">.col-6 .col-lg-4</div>
-        <div class="col-6 col-lg-4 articles__col">.col-6 .col-lg-4</div>
-        <div class="col-6 col-lg-4 articles__col">.col-6 .col-lg-4</div>
+        <!-- правая часть содержимого на десктопе  -->
+        <div class="col-12 col-lg-4 articles__col-right">
+          <div class="col col-12 articles__col extra">
+            <div class="extra__item">      
+              <div class="extra__text-block-btn">
+                <div class="extra__col-title-btn">ВОЗДУШНЫЕ ШАРЫ</div>
+                <button class="extra__btn button">смотреть
+                  <img class="extra__btn-img" src="img/shape-btn.png" alt="shape">
+                </button>
+              </div>
+              <picture>
+                <source media="(min-width: 992px)" srcset="img/extra1-desktop.png">
+                <img class="extra__img d-block w-100" src="img/extra1.png" alt="extra-img">
+              </picture>             
+            </div>            
+          </div>
+          <div class="col col-12 articles__col extra">
+            <div class="extra__item">      
+              <div class="extra__text-block-btn">
+                <div class="extra__col-title-btn">НЕОБЫЧНАЯ ФОТОСЕССИЯ</div>
+                <button class="extra__btn button">смотреть
+                  <img class="extra__btn-img" src="img/shape-btn.png" alt="shape">
+                </button>
+              </div>
+              <picture>
+                <source media="(min-width: 992px)" srcset="img/extra2-desktop.png">
+                <img class="extra__img d-block w-100" src="img/extra2.png" alt="extra-img">
+              </picture>             
+            </div>            
+          </div>
+          <div class="col col-12 articles__col extra">
+            <div class="extra__item">      
+              <div class="extra__text-block-btn">
+                <div class="extra__col-title-btn">Выставка птиц</div>
+                <button class="extra__btn button">смотреть
+                  <img class="extra__btn-img" src="img/shape-btn.png" alt="shape">
+                </button>
+              </div>
+              <picture>
+                <source media="(min-width: 992px)" srcset="img/extra3-desktop.png">
+                <img class="extra__img d-block w-100" src="img/extra3.png" alt="extra-img">
+              </picture>             
+            </div>            
+          </div>
+
+        </div>
+
       </div>
-     -->
-      <!-- Columns are always 50% wide, on mobile and desktop -->
-      <!-- <div class="row articles__row">
-        <div class="col-6 articles__col">.col-6</div>
-        <div class="col-6 articles__col">.col-6</div>
-      </div> -->
+
+      <!-- нижний мелкий слайдер -->
+      <div id="carouselExampleCaptions" class="carousel postnew" data-bs-ride="carousel">
+        <div class="carousel-indicators postnew__indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active postnew__item">      
+            <img src="img/postnew.png" class="d-block w-100 postnew__img" alt="slide-img">
+            <div class="carousel-caption postnew__caption">
+              <h5 class="postnew__title">КАК все успевать</h5>
+              <button class="postnew__btn button">смотреть</button>
+            </div>
+          </div>
+          <div class="carousel-item postnew__item">      
+            <img src="img/postnew2.png" class="d-block w-100 postnew__img" alt="slide-img">
+            <div class="carousel-caption postnew__caption">
+              <h5 class="postnew__title">КАК все успевать</h5>
+              <button class="postnew__btn button">смотреть</button>
+            </div>
+          </div>
+          <div class="carousel-item postnew__item">      
+            <img src="img/postnew3.png" class="d-block w-100 postnew__img" alt="slide-img">
+            <div class="carousel-caption postnew__caption">
+              <h5 class="postnew__title">КАК все успевать</h5>
+              <button class="postnew__btn button">смотреть</button>
+            </div>
+          </div>
+          <div class="carousel-item postnew__item">      
+            <img src="img/postnew4.png" class="d-block w-100 postnew__img" alt="slide-img">
+            <div class="carousel-caption postnew__caption">
+              <h5 class="postnew__title">КАК все успевать</h5>
+              <button class="postnew__btn button">смотреть</button>
+            </div>
+          </div>            
+        </div>
+        <button class="carousel-control-prev slide__control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next slide__control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+      
 
       
     </div>
