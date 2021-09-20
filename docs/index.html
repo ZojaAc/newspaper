@@ -14,19 +14,19 @@
 
 <body>
   <div class="container">
+    <button class="navbar-toggler nav__button js-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="nav__burger"></span>
+      <span class="nav__burger"></span>
+      <span class="nav__burger"></span>
+    </button>
     <div class="header">
       <div class="header__main-title">Новости культуры</div>
     </div>
 
     <!-- меню -->
-    <nav class="navbar nav navbar-expand-lg">
-      <button class="navbar-toggler nav__button js-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="nav__burger"></span>
-        <span class="nav__burger"></span>
-        <span class="nav__burger"></span>
-      </button>
+    <nav class="navbar nav navbar-expand-lg">      
       <div class="collapse nav__menu navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav flex-grow-1 justify-content-between">
+        <ul class="navbar-nav nav__list flex-grow-1 justify-content-between">
           <li class="nav__item">
             <a class="nav__link active" aria-current="page" href="#">новости
               <div class="nav__shape-block">
@@ -93,7 +93,9 @@
         </ul>
       </div>
     </nav>
+  </div>
 
+  <div class="container__slide">
     <!-- слайдер -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators slide__indicators">
@@ -143,21 +145,29 @@
           </div>
         </div>
       </div>
+
+      <!-- левая прокрутка -->
       <button class="carousel-control-prev slide__scroll-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
         <span class="slide__scroll-wrapper">
           <span class="slide__scroll-title">Предыдущая</span>
           <span class="slide__scroll-left"></span>
         </span>        
       </button>
-      <button class="carousel-control-prev slide__control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <div class="slide__vector d-none d-md-block"></div>
-      <button class="carousel-control-next slide__control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+
+      <!-- центральный блок прокрутки -->
+      <div class="slide__center-block">
+        <button class="carousel-control-prev slide__control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <div class="slide__vector d-none d-md-block"></div>
+        <button class="carousel-control-next slide__control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+      <!-- правая прокрутка -->
       <button class="carousel-control-next slide__scroll-next d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
         <span class="slide__scroll-wrapper">          
           <span class="slide__scroll-right"></span>
@@ -166,14 +176,21 @@
       </button>
     </div>
 
+  </div>
+
+  <div class="container">
+
+    
     <!-- основное содержимое -->
     <div class="articles">
-      <!-- Stack the columns on mobile by making one full-width and the other half-width -->
       <div class="row articles__row">
-        <div class="col-12 col-lg-8 articles__col-left">
-          <!-- <div class="row"> -->
+
+        <!-- левая часть (8 колонок на десктопе) -->
+        <div class="col-12 order-1 col-lg-8 articles__col-left">
+          <!-- первый ряд на десктопе для 2ух колонок (8 и 4) -->
+          <div class="row">  
             <div class="articles__title">НОВОСТИ</div>
-            <div class="col col-lg-8 articles__col">
+            <div class="col col-12 col-lg-7 articles__col">
               <div class="articles__col-wrapper">
                 <div class="articles__text-block">
                   <div class="articles__col-title">Новости культуры России и всего мира</div>
@@ -182,89 +199,105 @@
                 </div>
                 <picture>
                   <source media="(min-width: 992px)" srcset="img/new1-desktop.png">
-                  <img class="articles__img d-block w-100" src="img/new1.png" alt="new-img">
+                  <img class="articles__img articles__img--main w-100 d-block" src="img/new1.png" alt="new-img">
                 </picture>
               </div>                                          
             </div>
-            <div class="col col-lg-4 articles__col">
-              <div class="row articles__row-sm">
-                <div class="col col-6">
-                  <img class="articles__img" src="img/new21.png" alt="new-img">
+            <div class="col col-12 col-lg-5 articles__col">
+              <div class="articles__sm-block d-flex">
+                <div class="articles__sm-block-img flex-shrink-0">
+                  <img class="articles__sm-img" src="img/new21.png" alt="new-img">
+                  <img class="articles__vector" src="img/orange-vector.png" alt="accent-vector">
                 </div>
-                <div class="col col-6">
-                  <div class="articles__text-block-sm">
-                    <div class="articles__col-title-sm">Открытие нового памятника Евгению Леонову</div>
-                    <div class="articles__col-text-sm">10 сентября в 15:00 был открыт памятник писателю</div>
-                  </div>   
-                </div>
-              </div>
-              <div class="row articles__row-sm">
-                <div class="col col-6">
-                  <img class="articles__img" src="img/new22.png" alt="new-img">
-                </div>
-                <div class="col col-6">
-                  <div class="articles__text-block-sm">
-                    <div class="articles__col-title-sm">Беседы с писателями</div>
-                    <div class="articles__col-text-sm">Русские писатели беседуют о важности искусства</div>
-                  </div>   
+                <div class="articles__sm-text">
+                  <div class="articles__sm-title">Открытие нового памятника Евгению Леонову</div>
+                  <div class="articles__sm-content">10 сентября в 15:00 был открыт памятник писателю</div>
                 </div>
               </div>
-              <div class="row articles__row-sm">
-                <div class="col col-6">
-                  <img class="articles__img" src="img/new23.png" alt="new-img">
+              <div class="articles__sm-block d-flex">
+                <div class="articles__sm-block-img flex-shrink-0">
+                  <img class="articles__sm-img" src="img/new22.png" alt="new-img">
+                  <img class="articles__vector" src="img/orange-vector.png" alt="accent-vector">
                 </div>
-                <div class="col col-6">
-                  <div class="articles__text-block-sm">
-                    <div class="articles__col-title-sm">День и ночь св. Патрика: встреча старых друзей</div>
-                    <div class="articles__col-text-sm">Не Джойсом единым живет Ирландия!</div>
-                  </div>   
+                <div class="articles__sm-text">
+                  <div class="articles__sm-title">Беседы с писателями</div>
+                  <div class="articles__sm-content">Русские писатели беседуют о важности искусства</div>
+                </div>
+              </div>
+              <div class="articles__sm-block d-flex">
+                <div class="articles__sm-block-img flex-shrink-0">
+                  <img class="articles__sm-img" src="img/new23.png" alt="new-img">
+                  <img class="articles__vector" src="img/orange-vector.png" alt="accent-vector">
+                </div>
+                <div class="articles__sm-text">
+                  <div class="articles__sm-title">День и ночь св. Патрика: встреча старых друзей</div>
+                  <div class="articles__sm-content">Не Джойсом единым живет Ирландия!</div>
                 </div>
               </div>
             </div>
-          <!-- </div> -->
-          <!-- <div class="row"> -->
-
-            <div class="articles__title">обзоры</div>
-            <div class="col col-lg-6 articles__col">              
-              <picture>
-                <source media="(min-width: 992px)" srcset="img/new3-desktop.png">
-                <img class="articles__img d-block w-100" src="img/new3.png" alt="new-img">
-              </picture>  
+          </div>
+          <!-- второй ряд на десктопе для 2ух колонок (6 и 6) -->
+          <div class="row">
+            <div class="articles__title articles__title--sec">обзоры</div>
+            <div class="col col-lg-6 articles__col">        
+              <div class="articles__block-img">
+                <picture>
+                  <source media="(min-width: 992px)" srcset="img/new3-desktop.png">
+                  <img class="articles__img d-block w-100" src="img/new3.png" alt="new-img">
+                </picture>  
+                <img class="articles__vector" src="img/orange-vector.png" alt="accent-vector">
+              </div>                    
               <div class="articles__col-title">«Шальные годы» Монпарнаса</div>
               <div class="articles__col-text">В Музее изобразительных искусств имени Пушкина 
                 с 29 сентября по 29 ноября проходит выставка «Шальные годы Монпарнаса»
               </div>
             </div>
             <div class="col col-lg-6 articles__col">   
-              <picture>
-                <source media="(min-width: 992px)" srcset="img/new4-desktop.png">
-                <img class="articles__img d-block w-100" src="img/new4.png" alt="new-img">
-              </picture>               
-              <div class="articles__col-title articles__col-title-mark">Анатомия за 30 секунд</div>
+              <div class="articles__block-img">
+                <picture>
+                  <source media="(min-width: 992px)" srcset="img/new4-desktop.png">
+                  <img class="articles__img d-block w-100" src="img/new4.png" alt="new-img">
+                </picture>  
+                <img class="articles__vector" src="img/orange-vector.png" alt="accent-vector">
+              </div>                           
+              <div class="articles__col-title">Анатомия за 30 секунд</div>
               <div class="articles__col-text">Сейчас, когда мир открыт нараспашку для человека и его 
                 познавательных изысканий, интерес к научно-популярной литературе заметно вырос
               </div>
             </div>
-            <div class="col col-lg-6 articles__col">              
-              <picture>
-                <source media="(min-width: 992px)" srcset="img/new5-desktop.png">
-                <img class="articles__img d-block w-100" src="img/new5.png" alt="new-img">
-              </picture>    
+          </div>
+          <!-- третий ряд на десктопе для 2ух колонок (6 и 6) -->
+          <div class="row">            
+            <div class="col col-lg-6 articles__col">     
+              <div class="articles__block-img">
+                <picture>
+                  <source media="(min-width: 992px)" srcset="img/new5-desktop.png">
+                  <img class="articles__img d-block w-100" src="img/new5.png" alt="new-img">
+                </picture>  
+                <img class="articles__vector" src="img/orange-vector.png" alt="accent-vector">
+              </div>                         
               <div class="articles__col-title">Русские балетные сезоны</div>
               <div class="articles__col-text">В Новом Иерусалиме стартовал необычный 
                 культурно-развлекательный спектакль, который покажут в новом театре 
               </div>
             </div>
             <div class="col col-lg-6 articles__col">      
-              <picture>
-                <source media="(min-width: 992px)" srcset="img/new6-desktop.png">
-                <img class="articles__img d-block w-100" src="img/new6.png" alt="new-img">
-              </picture>           
+              <div class="articles__block-img">
+                <picture>
+                  <source media="(min-width: 992px)" srcset="img/new6-desktop.png">
+                  <img class="articles__img d-block w-100" src="img/new6.png" alt="new-img">
+                </picture> 
+                <img class="articles__vector" src="img/orange-vector.png" alt="accent-vector">
+              </div>                        
               <div class="articles__col-title">Сферические чудаки</div>
               <div class="articles__col-text">Корреспондентам «Культурного обозревателя» посчастливилось 
                 побывать в театре «Сфера» на премьере спектакля «Чудаки и зануды» 
               </div>
             </div>
+          </div>
+          <!-- четвертый ряд на десктопе для 1ой колонки (12) -->
+          <!-- нужны ли здесь ряды и колонки? -->
+          <div class="row">            
             <div class="col col-lg-12 articles__pages">      
               <a class="articles__sign-left" href="#">
                 <img class="articles__sign-img" src="img/Rectangle.png" alt="sign-img">
@@ -274,16 +307,19 @@
               <a class="articles__page" href="#">3</a>
               <a class="articles__page articles__page-desc" href="#">4</a>
               <a class="articles__page articles__page-desc" href="#">5</a>
-              <a class="articles__page articles__etc" href="#">...</a>
-              <a class="articles__page" href="#">11</a>
+              <a class="articles__page articles__page-desc-none articles__etc" href="#">...</a>
+              <a class="articles__page articles__page-desc-none" href="#">11</a>
               <a class="articles__page articles__etc articles__page-desc" href="#">...</a>
               <a class="articles__page articles__page-desc" href="#">35</a>
               <a class="articles__sign-right" href="#">
                 <img class="articles__sign-img" src="img/Rectangle.png" alt="sign-img">
               </a>
             </div>
+          </div>
+          <!-- пятый ряд на десктопе для 1ой колонки (12) -->
+          <div class="row">   
             <div class="col col-lg-12 articles__col">
-              <div class="articles__col-wrapper">
+              <div class="articles__col-wrapper-sec">
                 <div class="articles__text-block-btn">
                   <div class="articles__col-title-btn">Ох, уж этот балет</div>
                   <button class="articles__btn button">смотреть
@@ -295,17 +331,16 @@
                   <img class="articles__img d-block w-100" src="img/new7.png" alt="new-img">
                 </picture>
               </div>                                          
-            </div>
-     
-          <!-- </div> -->                  
+            </div>     
+          </div>                  
         </div>
         
-        <!-- правая часть содержимого на десктопе  -->
-        <div class="col-12 col-lg-4 articles__col-right">
-          <div class="col col-12 articles__col extra">
+        <!-- правая часть (4 колонки на десктопе)  -->
+        <div class="col-12 order-3 order-lg-2 col-lg-4 articles__col-right extra">
+          <!-- <div class="col col-12 articles__col extra"> -->
             <div class="extra__item">      
               <div class="extra__text-block-btn">
-                <div class="extra__col-title-btn">ВОЗДУШНЫЕ ШАРЫ</div>
+                <div class="extra__col-title-btn extra__col-title-btn--black">ВОЗДУШНЫЕ ШАРЫ</div>
                 <button class="extra__btn button">смотреть
                   <img class="extra__btn-img" src="img/shape-btn.png" alt="shape">
                 </button>
@@ -315,8 +350,8 @@
                 <img class="extra__img d-block w-100" src="img/extra1.png" alt="extra-img">
               </picture>             
             </div>            
-          </div>
-          <div class="col col-12 articles__col extra">
+          <!-- </div>
+          <div class="col col-12 articles__col extra"> -->
             <div class="extra__item">      
               <div class="extra__text-block-btn">
                 <div class="extra__col-title-btn">НЕОБЫЧНАЯ ФОТОСЕССИЯ</div>
@@ -329,8 +364,8 @@
                 <img class="extra__img d-block w-100" src="img/extra2.png" alt="extra-img">
               </picture>             
             </div>            
-          </div>
-          <div class="col col-12 articles__col extra">
+          <!-- </div>
+          <div class="col col-12 articles__col extra"> -->
             <div class="extra__item">      
               <div class="extra__text-block-btn">
                 <div class="extra__col-title-btn">Выставка птиц</div>
@@ -343,83 +378,192 @@
                 <img class="extra__img d-block w-100" src="img/extra3.png" alt="extra-img">
               </picture>             
             </div>            
-          </div>
+          <!-- </div> -->
 
         </div>
 
-      </div>
+        <!-- нижний мелкий слайдер -->
+        <div class="col-12 order-2 order-lg-3">          
 
-      <!-- нижний мелкий слайдер -->
-      <div id="carouselExampleCaptions" class="carousel postnew" data-bs-ride="carousel">
-        <div class="carousel-indicators postnew__indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active postnew__item">      
-            <img src="img/postnew.png" class="d-block w-100 postnew__img" alt="slide-img">
-            <div class="carousel-caption postnew__caption">
-              <h5 class="postnew__title">КАК все успевать</h5>
-              <button class="postnew__btn button">смотреть</button>
+          <div class="slider">
+            <div class="slider__container">
+              <div class="slider__wrapper">
+                <div class="slider__items">
+                  <div class="slider__item">
+                    <!-- Начало контента 1 слайда -->
+                    <div class="slider__item-container">
+                      <div class="slider__item-content">
+                        <div class="slider__content_header">
+                          <img class="slider__content_img" src="../img/postnew.png" alt="..." loading="lazy">
+                          <div class="slider__caption">
+                            <h5 class="slider__title">КАК все успевать</h5>
+                            <button class="slider__btn button">смотреть</button>
+                          </div>
+                        </div>                          
+                      </div>
+                    </div>
+                    <!-- Конец контента 1 слайда -->
+                  </div>
+                  <div class="slider__item">
+                    <!-- Начало контента 2 слайда -->
+                    <div class="slider__item-container">
+                      <div class="slider__item-content">
+                        <div class="slider__content_header">
+                          <img class="slider__content_img" src="../img/postnew2.png" alt="..." loading="lazy">
+                          <div class="slider__caption">
+                            <h5 class="slider__title">КАК все успевать</h5>
+                            <button class="slider__btn button">смотреть</button>
+                          </div>
+                        </div>                          
+                      </div>
+                    </div>
+                    <!-- Конец контента 2 слайда -->
+                  </div>
+                  <div class="slider__item">
+                    <!-- Начало контента 3 слайда -->
+                    <div class="slider__item-container">
+                      <div class="slider__item-content">
+                        <div class="slider__content_header">
+                          <img class="slider__content_img" src="../img/postnew3.png" alt="..." loading="lazy">
+                          <div class="slider__caption">
+                            <h5 class="slider__title">КАК все успевать</h5>
+                            <button class="slider__btn button">смотреть</button>
+                          </div>
+                        </div>                          
+                      </div>
+                    </div>
+                    <!-- Конец контента 3 слайда -->
+                  </div>
+                  <div class="slider__item">
+                    <!-- Начало контента 4 слайда -->
+                    <div class="slider__item-container">
+                      <div class="slider__item-content">
+                        <div class="slider__content_header">
+                          <img class="slider__content_img" src="../img/postnew4.png" alt="..." loading="lazy">
+                          <div class="slider__caption">
+                            <h5 class="slider__title">КАК все успевать</h5>
+                            <button class="slider__btn button">смотреть</button>
+                          </div>
+                        </div>                          
+                      </div>
+                    </div>
+                    <!-- Конец контента 4 слайда -->
+                  </div>
+                                      
+                  
+                </div>
+              </div>
+              <!-- <a href="#" class="slider__control" data-slide="prev"></a>
+              <a href="#" class="slider__control" data-slide="next"></a> -->
+              <!-- <ol class="slider__indicators">
+                <li data-slide-to="0" class="active"></li>
+                <li data-slide-to="1" class=""></li>
+                <li data-slide-to="2" class=""></li>
+                <li data-slide-to="3" class=""></li>                 
+              </ol> -->
+
+              <!-- 
+              <div class="carousel-indicators postnew__indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              </div> -->
+              <button class="carousel-control-prev slider__prev d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon slider__prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next slider__next d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon slider__next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+
             </div>
           </div>
-          <div class="carousel-item postnew__item">      
-            <img src="img/postnew2.png" class="d-block w-100 postnew__img" alt="slide-img">
-            <div class="carousel-caption postnew__caption">
-              <h5 class="postnew__title">КАК все успевать</h5>
-              <button class="postnew__btn button">смотреть</button>
-            </div>
-          </div>
-          <div class="carousel-item postnew__item">      
-            <img src="img/postnew3.png" class="d-block w-100 postnew__img" alt="slide-img">
-            <div class="carousel-caption postnew__caption">
-              <h5 class="postnew__title">КАК все успевать</h5>
-              <button class="postnew__btn button">смотреть</button>
-            </div>
-          </div>
-          <div class="carousel-item postnew__item">      
-            <img src="img/postnew4.png" class="d-block w-100 postnew__img" alt="slide-img">
-            <div class="carousel-caption postnew__caption">
-              <h5 class="postnew__title">КАК все успевать</h5>
-              <button class="postnew__btn button">смотреть</button>
-            </div>
-          </div>            
-        </div>
-        <button class="carousel-control-prev slide__control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next slide__control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+         
 
 
-      
+
+
+          <!-- <div id="carouselExampleCaptions" class="carousel postnew" data-bs-ride="carousel">
+            <div class="carousel-indicators postnew__indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active postnew__item">      
+                <img src="img/postnew.png" class="d-block w-100 postnew__img" alt="slide-img">
+                <div class="carousel-caption postnew__caption">
+                  <h5 class="postnew__title">КАК все успевать</h5>
+                  <button class="postnew__btn button">смотреть</button>
+                </div>
+              </div>
+              <div class="carousel-item postnew__item">      
+                <img src="img/postnew2.png" class="d-block w-100 postnew__img" alt="slide-img">
+                <div class="carousel-caption postnew__caption">
+                  <h5 class="postnew__title">КАК все успевать</h5>
+                  <button class="postnew__btn button">смотреть</button>
+                </div>
+              </div>
+              <div class="carousel-item postnew__item">      
+                <img src="img/postnew3.png" class="d-block w-100 postnew__img" alt="slide-img">
+                <div class="carousel-caption postnew__caption">
+                  <h5 class="postnew__title">КАК все успевать</h5>
+                  <button class="postnew__btn button">смотреть</button>
+                </div>
+              </div>
+              <div class="carousel-item postnew__item">      
+                <img src="img/postnew4.png" class="d-block w-100 postnew__img" alt="slide-img">
+                <div class="carousel-caption postnew__caption">
+                  <h5 class="postnew__title">КАК все успевать</h5>
+                  <button class="postnew__btn button">смотреть</button>
+                </div>
+              </div>            
+            </div>
+            <button class="carousel-control-prev slide__control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next slide__control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div> -->
+
+
+
+        </div>   
+
+      </div>     
 
       
     </div>
 
-    
   </div>
 
-    <!-- подключаем js -->
-    <script>
-      // изменение и перемещение кнопки бургер при нажатии
-      const btn = document.querySelector('.js-button');
-      // const body = document.querySelector('body');
-      btn.addEventListener('click', () => {
-        btn.classList.toggle('_active');
-        // body.classList.toggle('lock');
-      })
+     
+
+  <!-- подключаем js -->
+  <script>
+    // изменение и перемещение кнопки бургер при нажатии
+    const btn = document.querySelector('.js-button');
+    const body = document.querySelector('body');
+    const nav = document.querySelector('.nav');
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('_active');
+      body.classList.toggle('lock');
+      nav.classList.toggle('_active');
+    })
+
+  
 
 
-    </script>
-    <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </script>
+  <!-- <script src="js/main.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

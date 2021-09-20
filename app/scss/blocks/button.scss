@@ -6,10 +6,14 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   display: block;  
-  background-color: rgba(#000000, 0.9);
+  background-color: rgba(#000000, 0.4);
   border: 2px solid $col-accent;
   cursor: pointer;  
   padding: 11px 30px;
+
+  &:hover {
+    background-color: $col-accent;
+  }
   
   // width: 170px;
   // height: 47px;

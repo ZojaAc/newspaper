@@ -1,7 +1,16 @@
 .extra {
 
+  @include media-breakpoint-up(lg) {
+    margin-top: 100px;
+  }
+
   &__item {
     position: relative;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-up(lg) {
+      width: 370px;
+    }
   }
 
   &__text-block-btn {
@@ -22,7 +31,7 @@
     letter-spacing: 2px;
     text-align: center;
 
-    &__col-title-btn:first-child {
+    &--black {
       color: #1A1C1C;
     }
   }

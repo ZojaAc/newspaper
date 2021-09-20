@@ -1,11 +1,4 @@
 .slide {
-  margin-left: -16px;
-  margin-right: -16px;
-
-  // @include media-breakpoint-up(lg) {
-  //   width: 100vw;
-  //   margin: 0 auto;
-  // }
 
   &__img {
     height: 372px;
@@ -43,12 +36,13 @@
   }
 
   &__caption {
-    margin-left: -8%;
-    margin-right: -8%;
+    margin: 0 auto;
+    left: 8%;
+    right: 8%;
 
     @include media-breakpoint-up(lg) {
-      margin-left: 0;
-      margin-right: 0;
+      // margin-left: 0;
+      // margin-right: 0;
       // padding-left: 200px;
       // padding-right: 200px;
       max-width: 800px;
@@ -88,7 +82,7 @@
     width: 2px;
     background-color: $col-white;
     position: absolute;
-    top: 45%;
+    // top: 45%;
     // bottom: 0;
     z-index: 1;  
     // display: flex; 
@@ -97,22 +91,33 @@
     left: 50%;
   }
 
-  &__control-prev {
-    left: 45%;
+  &__center-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 70px;
+    height: 45px;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    top: 255px;
   }
 
-  &__control-next {
-    right: 45%;
+  &__control-prev, &__control-next {
+    opacity: 1;
   }
 
   &__scroll-prev {
-    left: 5%;
-    width: 15%;
+    left: 240px;
+    width: auto;
+    opacity: 1;
   }
 
   &__scroll-next {
-    right: 5%;
-    width: 15%;
+    right: 240px;
+    width: auto;
+    opacity: 1;
   }
 
   &__scroll-left {
@@ -121,6 +126,7 @@
     width: 64px;
     background-color: $col-white;
     z-index: 1;  
+    margin-left: 10px;
   }
 
   &__scroll-right {
@@ -129,6 +135,7 @@
     width: 64px;
     background-color: $col-white;
     z-index: 1;  
+    margin-right: 10px;
   }
 
   &__scroll-title {
@@ -143,5 +150,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+    position: absolute;
+    top: 278px;
   }
 }

@@ -1,8 +1,18 @@
 .nav {
   margin-left: -16px;
   margin-right: -16px;
-  position: static;
-
+  
+  &._active {
+    background-color: $col-white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    overflow: auto;
+  }
+ 
   @include media-breakpoint-up(lg) {
     margin-left: 0;
     margin-right: 0;
@@ -12,7 +22,7 @@
   &__menu {
     margin-top: 60px;
     overflow: auto;
-
+   
     @include media-breakpoint-up(lg) {
       margin-top: 0;
     }
@@ -28,6 +38,10 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
 
     &:focus {
       box-shadow: none;
@@ -95,6 +109,10 @@
       background-color: $col-white;
       padding: 5px;
     }
+  }
+
+  &__list {
+    background-color: $col-white;
   }
 
   &__item {
