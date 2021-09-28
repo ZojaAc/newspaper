@@ -1,6 +1,8 @@
 .nav {
-  margin-left: -16px;
-  margin-right: -16px;
+  // margin-left: -15px;
+  // margin-right: -15px;
+  max-width: 1170px;
+  margin: 0 auto;
   
   &._active {
     background-color: $col-white;
@@ -11,12 +13,11 @@
     left: 0;
     z-index: 5;
     overflow: auto;
+    margin: 0;
   }
  
   @include media-breakpoint-up(lg) {
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
   
   &__menu {
@@ -26,66 +27,6 @@
     @include media-breakpoint-up(lg) {
       margin-top: 0;
     }
-  }
-
-  &__button {
-    background-color: $col-accent;
-    padding: 18px 14px;
-    border: none;
-    border-radius: 0;
-    // width: 50px;
-    // height: 50px;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    @include media-breakpoint-up(lg) {
-      display: none;
-    }
-
-    &:focus {
-      box-shadow: none;
-    }
-
-    &._active {
-      background-color: $col-white;
-      padding: 0;
-      left: auto;
-      right: 17px;
-      top: 17px;
-      position: absolute;
-    
-      .nav__burger:nth-child(1) {
-        transform: rotate(45deg);
-        margin-bottom: 0;
-        background-color: #d7d9df;
-        width: 43px;
-      }
-
-      .nav__burger:nth-child(2) {
-        transform: rotate(-45deg);
-        margin-bottom: 0;
-        margin-top: -3px;
-        background-color: #d7d9df;
-        width: 43px;
-      }
-
-      .nav__burger:nth-child(3) {
-        display: none;
-      } 
-    }
-  }
-
-  &__burger {
-    background-color: $col-white;
-    display: block;
-    width: 23px;
-    height: 3px;
-    margin-bottom: 3px;
-  }
-
-  &__burger:nth-child(3) {
-    margin-bottom: 0;
   }
 
   &__link {
@@ -117,7 +58,8 @@
 
   &__item {
     margin-bottom: 20px;
-
+    // padding: 0 15px;
+    
     @include media-breakpoint-up(lg) {
       margin-bottom: 0;
     }

@@ -1,14 +1,15 @@
 .header {
   &__main-title {
-    @include font(25px, 33px, 900);
+    @include font(25px, 35px, 900);
     letter-spacing: 1px;
     font-family: $font-title;
     text-align: center;
     margin: 0 auto;
-    padding: 40px 20px 4px;
+    padding: 40px 40px 0;
+    max-width: 1170px;
     @include media-breakpoint-up(lg) {
       @include font(35px, 47px, 900);
-      padding: 60px 20px 30px;
+      padding: 60px 20px 25px;
       font-family: $font-title;
     }
   }

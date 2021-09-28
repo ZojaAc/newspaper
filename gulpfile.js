@@ -47,7 +47,7 @@ function img() {
             ]
         }))
         //раскоментрировать если нужен webp
-        // .pipe(dest('build/img'))
+        // .pipe(dest(buildFolder + '/img'))
         // .pipe(webp({ quality: 70 }))
         .pipe(dest(buildFolder + '/img'))
 };

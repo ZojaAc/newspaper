@@ -1,15 +1,33 @@
 .extra {
+    
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   @include media-breakpoint-up(lg) {
     margin-top: 100px;
+    // display: inline;
   }
 
   &__item {
+    display: block;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
+
+    @include media-breakpoint-up(sm) {
+      width: calc(100%/2);
+      padding: 10px;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: calc(100%/3);
+      padding: 5px;
+    }
 
     @include media-breakpoint-up(lg) {
-      width: 370px;
+      margin-bottom: 32px;
+      width: 100%;
     }
   }
 
@@ -21,6 +39,10 @@
     right: 0;
     z-index: 2;
     padding: 40px 50px;
+
+    @include media-breakpoint-up(lg) {
+      padding: 50px;
+    }
   }
 
   &__col-title-btn {
@@ -31,8 +53,13 @@
     letter-spacing: 2px;
     text-align: center;
 
-    &--black {
+    &--dark {
       color: #1A1C1C;
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include font(30px, 40px, 900);
+      font-family: $font-title;
     }
   }
   
@@ -46,10 +73,11 @@
     font-family: $font-text;
 
     @include media-breakpoint-up(lg) {
-      margin-top: 260px;
+      margin-top: 150px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 275px;
     }
   }
-
-  
-
 }
