@@ -237,6 +237,10 @@
     padding: 9px 15px;
     border: 1px solid $col-white;
     cursor: pointer;
+
+    @include media-breakpoint-up(lg) {
+      min-width: 57px;
+    }
   }
 
   &__page:hover {
@@ -290,7 +294,7 @@
     cursor: pointer;
 
     @include media-breakpoint-up(lg) {
-      margin-right: 80px;
+      margin-right: 70px;
     }
   }
 
@@ -301,7 +305,7 @@
     cursor: pointer;
 
     @include media-breakpoint-up(lg) {
-      margin-left: 80px;
+      margin-left: 70px;
     }
   }
 

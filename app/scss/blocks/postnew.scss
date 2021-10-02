@@ -87,6 +87,7 @@
     width: 44px;
     height: 44px;
     opacity: 0;
+    cursor: pointer;
 
     @include media-breakpoint-up(xl) {
       opacity: 1;
@@ -152,6 +153,7 @@
     @include media-breakpoint-up(lg) {
       padding-left: 0;
       padding-right: 0;
+      min-height: 146px;
     }
   }
 
@@ -165,6 +167,7 @@
       overflow: hidden;
       display: flex;
       align-items: center;
+      justify-content: center;
 
       &:hover {
         height: 136px;
