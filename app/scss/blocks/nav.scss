@@ -3,6 +3,10 @@
   // margin-right: -15px;
   max-width: 1170px;
   margin: 0 auto;
+
+  @include media-breakpoint-up(lg) {
+    flex-wrap: wrap;
+  }
   
   &._active {
     background-color: $col-white;

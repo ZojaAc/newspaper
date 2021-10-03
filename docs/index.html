@@ -31,10 +31,7 @@
     <source srcset="img/Desktop.jpg" media="(min-width: 992px)">
     <img class="pp" src="img/Mobile.jpg">
   </picture> -->
-  <div class="header">
-    <div class="header__main-title">Новости культуры</div>
-  </div>
-
+  
   <!-- меню -->
   <nav class="navbar nav navbar-expand-lg">    
     <div class="burger">
@@ -43,7 +40,10 @@
         <span class="burger__line"></span>
         <span class="burger__line"></span>
       </button>
-    </div>  
+    </div> 
+    <div class="header">
+      <div class="header__main-title">Новости культуры</div>
+    </div> 
     <div class="collapse nav__menu navbar-collapse" id="navbarNav">
       <ul class="navbar-nav nav__list flex-grow-1 justify-content-between">
         <li class="nav__item">
@@ -202,7 +202,7 @@
             <div class="articles__title">НОВОСТИ</div>
             <div class="col col-12 col-sm-6 col-lg-7 articles__col">
               <div class="articles__transit">
-                <a href="#" class="articles__col-wrapper">                  
+                <a href="#" onclick="return false" class="articles__col-wrapper">                  
                   <div class="articles__text-block">
                     <div class="articles__col-title">Новости культуры России и всего мира</div>
                     <div class="articles__col-text">В минувшие выходные в Москве на фестивале «Оберег» 
@@ -219,42 +219,54 @@
               </div>             
             </div>
             <div class="col col-12 col-sm-6 col-lg-5 articles__col articles__col-plb">
-              <div class="articles__sm-block d-flex">
-                <div class="articles__sm-block-img flex-shrink-0">
-                  <img class="articles__sm-img" src="img/new-sm-first.jpg" alt="new-img">
-                  <button class="articles__select">
-                    <img class="articles__label" src="img/icon-selected.png" alt="selected">
-                  </button>
-                </div>
-                <div class="articles__sm-text">
-                  <div class="articles__sm-title">Открытие нового памятника Евгению Леонову</div>
-                  <div class="articles__sm-content">10 сентября в 15:00 был открыт памятник писателю</div>
-                </div>
-              </div>
-              <div class="articles__sm-block d-flex">
-                <div class="articles__sm-block-img flex-shrink-0">
-                  <img class="articles__sm-img" src="img/new-sm-second.jpg" alt="new-img">
-                  <button class="articles__select">
-                    <img class="articles__label" src="img/icon-selected.png" alt="selected">
-                  </button>
-                </div>
-                <div class="articles__sm-text">
-                  <div class="articles__sm-title">Беседы с писателями</div>
-                  <div class="articles__sm-content">Русские писатели беседуют о важности искусства</div>
-                </div>
-              </div>
-              <div class="articles__sm-block d-flex">
-                <div class="articles__sm-block-img flex-shrink-0">
-                  <img class="articles__sm-img" src="img/new-sm-third.jpg" alt="new-img">
-                  <button class="articles__select">
-                    <img class="articles__label" src="img/icon-selected.png" alt="selected">
-                  </button>
-                </div>
-                <div class="articles__sm-text">
-                  <div class="articles__sm-title">День и ночь св. Патрика: встреча старых друзей</div>
-                  <div class="articles__sm-content">Не Джойсом единым живет Ирландия!</div>
-                </div>
-              </div>
+              <div class="articles__transit-sm">
+                <a class="articles__jump" href="#" onclick="return false">
+                  <div class="articles__sm-block d-flex">
+                    <div class="articles__sm-block-img flex-shrink-0">
+                      <img class="articles__sm-img" src="img/new-sm-first.jpg" alt="new-img">                  
+                    </div>
+                    <div class="articles__sm-text">
+                      <div class="articles__sm-title">Открытие нового памятника Евгению Леонову</div>
+                      <div class="articles__sm-content">10 сентября в 15:00 был открыт памятник писателю</div>
+                    </div>
+                  </div>
+                </a>
+                <button class="articles__select">
+                  <img class="articles__label" src="img/icon-selected.png" alt="selected">
+                </button>
+              </div>           
+              <div class="articles__transit-sm">
+                <a class="articles__jump" href="#" onclick="return false">
+                  <div class="articles__sm-block d-flex">
+                    <div class="articles__sm-block-img flex-shrink-0">
+                      <img class="articles__sm-img" src="img/new-sm-second.jpg" alt="new-img">                     
+                    </div>
+                    <div class="articles__sm-text">
+                      <div class="articles__sm-title">Беседы с писателями</div>
+                      <div class="articles__sm-content">Русские писатели беседуют о важности искусства</div>
+                    </div>
+                  </div>
+                </a>
+                <button class="articles__select">
+                  <img class="articles__label" src="img/icon-selected.png" alt="selected">
+                </button>
+              </div>   
+              <div class="articles__transit-sm">
+                <a class="articles__jump" href="#" onclick="return false">
+                  <div class="articles__sm-block d-flex">
+                    <div class="articles__sm-block-img flex-shrink-0">
+                      <img class="articles__sm-img" src="img/new-sm-third.jpg" alt="new-img">                     
+                    </div>
+                    <div class="articles__sm-text">
+                      <div class="articles__sm-title">День и ночь св. Патрика: встреча старых друзей</div>
+                      <div class="articles__sm-content">Не Джойсом единым живет Ирландия!</div>
+                    </div>
+                  </div>
+                </a>
+                <button class="articles__select">
+                  <img class="articles__label" src="img/icon-selected.png" alt="selected">
+                </button>
+              </div>             
             </div>
           </div>
           <!-- второй ряд на десктопе для 2ух колонок (6 и 6) -->
@@ -262,7 +274,7 @@
             <div class="articles__title articles__title--sec">обзоры</div>
             <div class="col col-md-6 col-lg-6 articles__col articles__col--pr"> 
               <div class="articles__transit">
-                <a class="articles__jump" href="#">
+                <a class="articles__jump" href="#" onclick="return false">
                   <div class="articles__block-img">
                     <picture>
                       <source media="(min-width: 992px)" srcset="img/new-first-deskt.jpg">
@@ -281,7 +293,7 @@
             </div>
             <div class="col col-md-6 col-lg-6 articles__col articles__col--pl">   
               <div class="articles__transit">
-                <a href="#" class="articles__jump">
+                <a href="#" class="articles__jump" onclick="return false">
                   <div class="articles__block-img">
                     <picture>
                       <source media="(min-width: 992px)" srcset="img/new-sec-deskt.jpg">
@@ -307,7 +319,7 @@
           <div class="row">            
             <div class="col col-md-6 col-lg-6 articles__col articles__col--pr articles__col--mb">  
               <div class="articles__transit">
-                <a href="#" class="articles__jump">
+                <a href="#" onclick="return false" class="articles__jump">
                   <div class="articles__block-img">
                     <picture>
                       <source media="(min-width: 992px)" srcset="img/new-th-deskt.jpg">
@@ -326,7 +338,7 @@
             </div>
             <div class="col col-md-6 col-lg-6 articles__col articles__col--pl">      
               <div class="articles__transit">
-                <a href="#" class="articles__jump">
+                <a href="#" class="articles__jump" onclick="return false">
                   <div class="articles__block-img">
                     <picture>
                       <source media="(min-width: 992px)" srcset="img/new-fo-deskt.jpg">
@@ -370,7 +382,7 @@
           <!-- пятый ряд на десктопе для 1ой колонки (12) -->
           <div class="row">   
             <div class="col col-lg-12 articles__col articles__col--ppnone">
-              <a href="#" class="articles__col-wrapper-sec">
+              <a href="#" onclick="return false" class="articles__col-wrapper-sec">
                 <div class="articles__text-block-btn">
                   <div class="articles__col-title-btn">Ох, уж этот балет</div>
                   <div class="articles__btn button">смотреть
@@ -388,7 +400,7 @@
         
         <!-- правая часть (4 колонки на десктопе)  -->
         <div class="col-12 order-3 order-lg-2 col-lg-4 articles__col-right extra">             
-          <a href="#" class="extra__item">      
+          <a href="#" onclick="return false" class="extra__item">      
             <div class="extra__text-block-btn">
               <div class="extra__col-title-btn extra__col-title-btn--dark">ВОЗДУШНЫЕ ШАРЫ</div>
               <div class="extra__btn button">смотреть
@@ -400,7 +412,7 @@
               <img class="extra__img d-block w-100" src="img/extra-first.jpg" alt="extra-img">
             </picture>             
           </a>         
-          <a href="#" class="extra__item">      
+          <a href="#" onclick="return false" class="extra__item">      
             <div class="extra__text-block-btn">
               <div class="extra__col-title-btn">НЕОБЫЧНАЯ ФОТОСЕССИЯ</div>
               <div class="extra__btn button">смотреть
@@ -412,7 +424,7 @@
               <img class="extra__img d-block w-100" src="img/extra-second.jpg" alt="extra-img">
             </picture>             
           </a>            
-          <a href="#" class="extra__item">      
+          <a href="#" onclick="return false" class="extra__item">      
             <div class="extra__text-block-btn">
               <div class="extra__col-title-btn">Выставка птиц</div>
               <div class="extra__btn button">смотреть
@@ -500,63 +512,63 @@
         <div class="collapse nav__menu navbar-collapse">
           <ul class="navbar-nav nav__list flex-grow-1 justify-content-between footer__color">
             <li class="nav__item">
-              <a class="nav__link active footer__color" aria-current="page" href="#">новости
+              <a class="nav__link footer__color" aria-current="page" href="#" onclick="return false">новости
                 <div class="nav__shape-block">
                   <img class="nav__shape" src="img/arrow-grey.png" alt="arrow">
                 </div>              
               </a>            
             </li>
             <li class="nav__item">
-              <a class="nav__link footer__color" href="#">обзоры
+              <a class="nav__link footer__color" href="#" onclick="return false">обзоры
                 <div class="nav__shape-block">
                   <img class="nav__shape" src="img/arrow-grey.png" alt="arrow">
                 </div>         
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link footer__color" href="#">музыка
+              <a class="nav__link footer__color" href="#" onclick="return false">музыка
                 <div class="nav__shape-block">
                   <img class="nav__shape" src="img/arrow-grey.png" alt="arrow">
                 </div>         
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link footer__color" href="#">архитектура
+              <a class="nav__link footer__color" href="#" onclick="return false">архитектура
                 <div class="nav__shape-block">
                   <img class="nav__shape" src="img/arrow-grey.png" alt="arrow">
                 </div>         
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link footer__color" href="#">кино
+              <a class="nav__link footer__color" href="#" onclick="return false">кино
                 <div class="nav__shape-block">
                   <img class="nav__shape" src="img/arrow-grey.png" alt="arrow">
                 </div>         
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link footer__color" href="#">театр
+              <a class="nav__link footer__color" href="#" onclick="return false">театр
                 <div class="nav__shape-block">
                   <img class="nav__shape" src="img/arrow-grey.png" alt="arrow">
                 </div>         
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link footer__color" href="#">литература
+              <a class="nav__link footer__color" href="#" onclick="return false">литература
                 <div class="nav__shape-block">
                   <img class="nav__shape" src="img/arrow-grey.png" alt="arrow">
                 </div>         
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link footer__color" href="#">религия
+              <a class="nav__link footer__color" href="#" onclick="return false">религия
                 <div class="nav__shape-block">
                   <img class="nav__shape" src="img/arrow-grey.png" alt="arrow">
                 </div>         
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link footer__color" href="#">живопись
+              <a class="nav__link footer__color" href="#" onclick="return false">живопись
                 <div class="nav__shape-block">
                   <img class="nav__shape" src="img/arrow-grey.png" alt="arrow">
                 </div>         
@@ -580,10 +592,12 @@
     const btn = document.querySelector('.js-button');
     const body = document.querySelector('body');
     const nav = document.querySelector('.nav');
+    const header = document.querySelector('.header');
     btn.addEventListener('click', () => {
       btn.classList.toggle('_active');
       body.classList.toggle('lock');
       nav.classList.toggle('_active');
+      header.classList.toggle('_active');
     })
 
   </script>

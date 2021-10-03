@@ -151,6 +151,23 @@
     }
   }
 
+  &__transit-sm {
+    position: relative;
+
+    .articles__select {
+      position: absolute;
+      top: 9px;
+      left: 105px;
+    }
+
+    &:hover {
+      .articles__select {
+        opacity: 1;
+        transition: opacity 400ms ease;
+      }
+    }
+  }
+
   &__text-block {
     position: absolute;
     bottom: 0;
@@ -163,13 +180,6 @@
     
     &:nth-child(3) {
       margin-bottom: 0;
-    }
-
-    &:hover {
-      .articles__select {
-        opacity: 1;
-        transition: opacity 400ms ease;
-      }
     }
   }
 
